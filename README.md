@@ -10,50 +10,28 @@
 ![Kotlin](https://img.shields.io/badge/Kotlin-Jetpack%20Compose-7F52FF?style=for-the-badge\&logo=kotlin\&logoColor=white)
 ![Offline](https://img.shields.io/badge/Offline--First-Local%20Emergency%20Flow-00C853?style=for-the-badge)
 ![SQLite](https://img.shields.io/badge/Database-SQLite-2563EB?style=for-the-badge)
-![Prototype](https://img.shields.io/badge/Status-Prototype%201-FF9800?style=for-the-badge)
+![Prototype](https://img.shields.io/badge/Status-Prototype-FF9800?style=for-the-badge)
 
 </div>
 
 ---
 
-## Project Credit
+## About This Fork
+
+This repository is a maintained fork of the original RoadSOS project.
 
 - Original Creator: Ashutosh Mishra
-- Editor / Maintainer on this fork: S-procoder
+- Original Repository: https://github.com/ashu-mishra06/RoadSOS
 
-This repository is a fork of the original RoadSOS project created by Ashutosh Mishra. The original creator retains the project ownership and design credit. This fork is being updated and refined by S-procoder under the original creator's guidance and permissions.
+All design credit, project ownership, and original development work belong to Ashutosh Mishra and the original project team. This fork is maintained for project continuity, documentation cleanup, and code upkeep without claiming ownership of the original project.
 
----
+For the original project, please visit the upstream repository above.
 
-## Hackathon Snapshot
-
-<pre>
-Problem Statement: 1.3 RoadSoS — Emergency Response Optimization  
-        
-Team: Fuzeppers  
-        
-Project Type: Android offline-first emergency assistant  
-        
-Core Claim: On-device crash-like sound detection + false-alarm countdown + emergency SMS/call + offline nearby service lookup  
-        
-Prototype Status: Working Prototype 1  
-        
-Final DB Size: 7.46 MB  
-        
-TFLite Model Size: 1.1 MB  
-        
-APK Size: ~40 MB
-        
-</pre>
-
-```text
-This prototype is designed for hackathon demonstration and first-response support, not as a certified emergency dispatch system.
-```
 ---
 
 ## The Idea
 
-**RoadSOS** is an Android emergency-response prototype built to reduce the delay between a possible road accident and the first human response.
+**RoadSOS** is an Android emergency-response application designed to reduce the delay between a possible road accident and the first human response.
 
 It listens for crash-like events, starts a false-alarm countdown, and if the user does not cancel, it moves into emergency mode.
 
@@ -63,7 +41,7 @@ From there, RoadSOS can send SOS messages to saved contacts, attach current or l
 Detect → Countdown → Alert → Locate → Assist → Record
 ```
 
-This is **Prototype 1**: a working emergency workflow prototype, not a certified crash-response system.
+This project is focused on a practical emergency workflow for early assistance, while keeping the system clearly marked as a prototype rather than a certified emergency dispatch solution.
 
 ---
 
@@ -187,7 +165,7 @@ Emergency countdown
 
 </div>
 
-The detection layer is intentionally described as **crash-like sound detection**, not certified crash detection. This keeps the prototype honest and technically grounded.
+The detection layer is intentionally described as **crash-like sound detection**, not certified crash detection. This keeps the system grounded and honest about its current prototype status.
 
 ---
 
@@ -249,7 +227,7 @@ The goal is simple: give contacts enough information to act quickly.
 
 RoadSOS includes an offline SQLite database stored inside app assets.
 
-The Map screen can show nearby emergency services using current or last-known location.
+The map screen can show nearby emergency services using current or last-known location.
 
 Supported emergency categories include:
 
@@ -281,7 +259,7 @@ RoadSOS records:
 | Call status       | Auto-call result                    |
 | Auto-call setting | Whether auto-call was enabled       |
 
-This creates a small audit trail for testing, debugging, and demonstration.
+This creates a small audit trail for testing, debugging, and review.
 
 ---
 
@@ -400,74 +378,203 @@ RoadSOS
 
 ---
 
-## Run Locally
+## Getting Started
+
+### Prerequisites
+
+- **Android Studio** (latest version recommended)
+- **JDK 11 or higher**
+- **Android SDK 29+** (API level 29 or higher)
+- **Android Device or Emulator** running Android 9+ (API 29+)
+
+### Step 1: Clone the Repository
+
+Clone from the original repository:
 
 ```bash
 git clone https://github.com/ashu-mishra06/RoadSOS.git
 cd RoadSOS
 ```
 
-Open the project in Android Studio.
+Or clone from this fork:
 
-```text
-Sync Gradle → Build Project → Run App
+```bash
+git clone https://github.com/S-procoder/RoadSOS.git
+cd RoadSOS
 ```
 
-Debug APK:
+### Step 2: Open in Android Studio
+
+1. Open **Android Studio**
+2. Select **File** → **Open** 
+3. Navigate to the RoadSOS folder and select it
+4. Wait for Gradle to sync (this may take a few minutes)
+
+### Step 3: Sync Gradle
+
+Once the project opens:
+
+```text
+Android Studio will prompt you to sync Gradle
+→ Click "Sync Now" when prompted
+→ Wait for the build to complete
+```
+
+### Step 4: Set Up an Android Device/Emulator
+
+#### Option A: Use Android Emulator
+
+1. Open **Device Manager** in Android Studio
+2. Create a new Virtual Device (if you don't have one)
+   - Device: Pixel 4 or similar
+   - Android Version: 9+ (API 29+)
+3. Start the emulator
+
+#### Option B: Use a Physical Device
+
+1. Connect your Android phone via USB
+2. Enable **Developer Mode** on your phone:
+   - Go to **Settings** → **About Phone**
+   - Tap **Build Number** 7 times
+   - Go back to **Settings** → **Developer Options**
+   - Enable **USB Debugging**
+
+### Step 5: Build and Run
+
+1. Select your device/emulator from the top toolbar
+2. Click the **Run** button (green play icon)
+   - Or press `Shift + F10` on Windows/Linux or `Ctrl + R` on Mac
+3. Wait for the app to build and install
+
+You should see the RoadSOS app launch on your device/emulator.
+
+---
+
+## Testing the App
+
+### First Launch
+
+When you first open the app:
+
+1. **Fill in Your Profile:**
+   - Name
+   - Blood group
+   - Medical details (optional)
+
+2. **Add Emergency Contacts:**
+   - Add at least one contact's phone number
+   - This is who will receive the SOS alert
+
+3. **Grant Permissions:**
+   - Audio recording
+   - Location access
+   - SMS sending
+   - Phone calling
+   - Notifications
+
+4. **Verify Permission Status:**
+   - Go to Settings tab
+   - Check that all required permissions are enabled
+
+### Testing Manual SOS
+
+1. On the **Home** tab, tap the large **SOS** button
+2. A countdown will start (typically 30 seconds)
+3. **Test Cancel:** Tap the screen to cancel before the countdown ends
+4. **Test Emergency Trigger:** Let the countdown complete
+5. Check the app logs or **History** tab to see if SMS/call attempts were made
+
+### Testing Crash Detection (Optional)
+
+1. Keep the app running in the background
+2. Play a loud crash-like sound near your phone's microphone
+3. If detected, the app will show a countdown
+4. Cancel or let it trigger an emergency alert
+
+### Testing Location Fallback
+
+1. Turn location **ON** and let the app run for a minute
+2. The app will save your current location
+3. Turn location **OFF**
+4. Trigger an SOS alert
+5. Check **History** to see if the saved location was used
+
+### Offline Testing
+
+1. Turn off **WiFi and Mobile Data**
+2. Keep location services **ON**
+3. Trigger an SOS alert
+4. The app should still function and show nearby offline services from its local database
+
+---
+
+## Building a Debug APK
+
+To create an APK file you can share or install on multiple devices:
 
 ```bash
 ./gradlew assembleDebug
 ```
 
-APK output:
+The APK will be located at:
 
 ```text
 app/build/outputs/apk/debug/app-debug.apk
 ```
 
+You can then:
+1. Transfer this APK to any Android device
+2. Enable "Install from Unknown Sources" in Settings
+3. Install and run the app
+
 ---
 
-## Testing Checklist
+## Building a Release APK (Advanced)
 
-```text
-First Launch
-→ Fill profile
-→ Add contacts
-→ Grant permissions
-→ Verify Settings permission card
+For a release build (requires signing configuration):
 
-Manual SOS
-→ Press SOS
-→ Cancel countdown once
-→ Trigger again
-→ Let emergency activate
-→ Check SMS/call status
-→ Check Emergency History
-
-Crash-like Detection
-→ Keep monitoring active
-→ Play crash-like sound
-→ Wait for countdown
-→ Verify emergency flow
-
-Location Fallback
-→ Turn location ON once
-→ Let app save location
-→ Turn location OFF
-→ Trigger SOS
-→ Verify last-known location in SMS/map
-
-Offline Check
-→ Turn internet OFF
-→ Keep location ON
-→ Verify offline DB lookup
+```bash
+./gradlew assembleRelease
 ```
+
+---
+
+## Troubleshooting
+
+### Gradle Sync Issues
+
+- Clear Gradle cache:
+  ```bash
+  ./gradlew clean
+  ```
+- Invalidate Android Studio cache: **File** → **Invalidate Caches** → **Invalidate and Restart**
+
+### App Crashes on Launch
+
+- Check that all required permissions are granted
+- Check Android Studio **Logcat** for error messages
+- Ensure your device/emulator is running Android 9+ (API 29+)
+
+### Permissions Not Requested
+
+- On Android 6+, the app should request permissions at runtime
+- If not appearing, go to **Settings** → **Apps** → **RoadSOS** → **Permissions** and enable manually
+
+### SMS Not Sending (Emulator)
+
+- The Android Emulator cannot send real SMS
+- To test SMS functionality, use a physical device or a service like Firebase Cloud Messaging
+
+### Location Not Updating
+
+- Ensure location is enabled on your device
+- For emulator: Open **Extended Controls** → **Location** and set a test location
 
 ---
 
 ## Prototype Boundaries
 
-RoadSOS Prototype 1 is functional, but it is not production-certified.
+RoadSOS is functional as a prototype, but it is not a certified emergency response system.
 
 Known boundaries:
 
@@ -522,13 +629,12 @@ RoadSOS is an offline-first Android crash emergency prototype that detects crash
 | Satvik Jain           | ML and Presentation                             |
 | Arpit Singh Bhadoriya | UI Integration                                  |
 | Vivek Jangela         | Frontend and App Integration                    |
-| S-procoder            | Fork editor, documentation updates, project maintenance |
 
 ---
 
 ## Disclaimer
 
-RoadSOS is a hackathon prototype built for learning, demonstration, and research.
+RoadSOS is a prototype built for learning, demonstration, and research.
 
 It is **not a certified emergency response system** and should not be used as a replacement for official emergency services without real-world validation, legal review, regulatory approval, and safety testing.
 
@@ -536,9 +642,9 @@ It is **not a certified emergency response system** and should not be used as a 
 
 ## Copyright Notice
 
-© 2026 Ashutosh Mishra. Original project creator. This fork is edited and maintained by S-procoder under the original creator's guidance and permissions.
+© 2026 Ashutosh Mishra / Team Fuzeppers. All rights reserved.
 
-This project is publicly available for portfolio, educational review, and hackathon evaluation purposes only. Unauthorized copying, redistribution, modification, commercial use, or claiming this project as your own is not permitted without written permission from the original creator and the relevant project contributors.
+This project is publicly available for review, educational use, and project continuity. Unauthorized copying, redistribution, modification, commercial use, or claiming this project as your own is not permitted without written permission.
 
 ---
 
