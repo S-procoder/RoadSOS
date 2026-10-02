@@ -2,8 +2,8 @@ Copyright (c) 2026 Team Fuzeppers
 
 All rights reserved.
 
-This source code and associated files are made publicly visible for portfolio,
-educational review, hackathon evaluation, and demonstration purposes only.
+This source code and associated files are made publicly visible for public review,
+learning, and maintenance purposes only.
 
 No permission is granted to copy, modify, distribute, sublicense, sell, publish,
 or claim ownership of this software or any substantial part of it without prior
@@ -13,9 +13,14 @@ Unauthorized use, reproduction, redistribution, or plagiarism of this project is
 strictly prohibited.
 
 Project: RoadSOS
-Repository: https://github.com/ashu-mishra06/RoadSOS
-Author: Ashutosh Mishra
+Original Repository: https://github.com/ashu-mishra06/RoadSOS
+Original Creator: Ashutosh Mishra
 
-Contributors:
+Original project contributors:
 - Ashutosh Mishra
 - Satvik Jain
+- Arpit Singh Bhadoriya
+- Vivek Jangela
+
+This fork is a maintained mirror for project continuity and documentation cleanup.
+All project design, code, and credit remain with the original creator and the original project team.
