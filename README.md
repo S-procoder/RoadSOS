@@ -41,8 +41,9 @@ From there, RoadSOS can send SOS messages to saved contacts, attach current or l
 Detect → Countdown → Alert → Locate → Assist → Record
 ```
 
-This project is focused on a practical emergency workflow for early assistance, while keeping the system clearly marked as a prototype rather than a certified emergency dispatch solution.
+This project is focused on a practical emergency workflow for early assistance, while keeping the system clearly marked as a prototype rather than a certified emergency dispatch solution. 
 
+Note : This is not a Certified Emergency Medical Tool this is a 
 ---
 
 ## Why This Matters
