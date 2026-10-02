@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=26&duration=2800&pause=700&color=FF1744&center=true&vCenter=true&width=950&lines=Crash+Emergency+Prototype;Smart+SOS+Countdown;Last-Known+Location+Fallback;Offline+Emergency+Lookup;Built+for+Road+Safety" alt="RoadSOS Typing Animation" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=26&duration=2800&pause=700&color=FF1744&center=true&vCenter=true&width=950&lines=Crash+Emergency+Prototype;Smart+SOS+Assistant;Offline+First+Response" alt="RoadSOS Banner" />
 
 <br/>
 
@@ -13,6 +13,15 @@
 ![Prototype](https://img.shields.io/badge/Status-Prototype%201-FF9800?style=for-the-badge)
 
 </div>
+
+---
+
+## Project Credit
+
+- Original Creator: Ashutosh Mishra
+- Editor / Maintainer on this fork: S-procoder
+
+This repository is a fork of the original RoadSOS project created by Ashutosh Mishra. The original creator retains the project ownership and design credit. This fork is being updated and refined by S-procoder under the original creator's guidance and permissions.
 
 ---
 
@@ -48,7 +57,7 @@ This prototype is designed for hackathon demonstration and first-response suppor
 
 It listens for crash-like events, starts a false-alarm countdown, and if the user does not cancel, it moves into emergency mode.
 
-From there, RoadSOS can send SOS messages to saved contacts, attach current or last-known location, optionally attempt an emergency call, show nearby offline emergency services, and save the event locally.
+From there, RoadSOS can send SOS messages to saved contacts, attach current or last-known location, optionally attempt an emergency call, show nearby offline emergency services, and save the event history for review.
 
 ```text
 Detect → Countdown → Alert → Locate → Assist → Record
@@ -60,7 +69,7 @@ This is **Prototype 1**: a working emergency workflow prototype, not a certified
 
 ## Why This Matters
 
-After an accident, the victim may be unconscious, injured, shocked, or unable to unlock the phone. In many cases, help is delayed not because help is unavailable, but because no one knows the accident happened quickly enough.
+After an accident, the victim may be unconscious, injured, shocked, or unable to unlock the phone. In many cases, help is delayed not because help is unavailable, but because no one knows the accident has happened.
 
 RoadSOS focuses on that first-response gap.
 
@@ -129,23 +138,23 @@ Local emergency history
 ┌──────────────────────────────┐
 │        Jetpack Compose UI     │
 └───────────────┬──────────────┘
-                ↓
+                 ↓
 ┌──────────────────────────────┐
 │          ViewModels           │
 │ Emergency / Location / Map    │
 │ Profile / Settings / History  │
 └───────────────┬──────────────┘
-                ↓
+                 ↓
 ┌──────────────────────────────┐
 │        Local Data Layer       │
 │ DataStore + SQLite Assets DB  │
 └───────────────┬──────────────┘
-                ↓
+                 ↓
 ┌──────────────────────────────┐
 │       Emergency Managers      │
 │ SMS / Call / Status / History │
 └───────────────┬──────────────┘
-                ↓
+                 ↓
 ┌──────────────────────────────┐
 │     Background Monitoring     │
 │ Audio Service + ML Helper     │
@@ -500,7 +509,7 @@ Do not rely on only one contact
 ## Demo Line
 
 ```text
-RoadSOS is an offline-first Android crash emergency prototype that detects crash-like events locally, starts a false-alarm countdown, sends SOS alerts with current or last-known location, optionally attempts emergency calling, and stores a local emergency history.
+RoadSOS is an offline-first Android crash emergency prototype that detects crash-like events locally, starts a false-alarm countdown, sends SOS alerts with current or last-known location, optionally calls emergency services, and helps users get immediate support even without internet access.
 ```
 
 ---
@@ -509,10 +518,11 @@ RoadSOS is an offline-first Android crash emergency prototype that detects crash
 
 | Member                | Role                                            |
 | --------------------- | ----------------------------------------------- |
-| Ashutosh Mishra       | DB, Frontend, App Integration and Documentation |
+| Ashutosh Mishra       | Original creator, DB, Frontend, App Integration and Documentation |
 | Satvik Jain           | ML and Presentation                             |
 | Arpit Singh Bhadoriya | UI Integration                                  |
 | Vivek Jangela         | Frontend and App Integration                    |
+| S-procoder            | Fork editor, documentation updates, project maintenance |
 
 ---
 
@@ -526,10 +536,9 @@ It is **not a certified emergency response system** and should not be used as a 
 
 ## Copyright Notice
 
-© 2026 Ashutosh Mishra / Team Fuzeppers. All rights reserved.
+© 2026 Ashutosh Mishra. Original project creator. This fork is edited and maintained by S-procoder under the original creator's guidance and permissions.
 
-This project is publicly available for portfolio, educational review, and hackathon evaluation purposes only.  
-Unauthorized copying, redistribution, modification, commercial use, or claiming this project as your own is not permitted without written permission.
+This project is publicly available for portfolio, educational review, and hackathon evaluation purposes only. Unauthorized copying, redistribution, modification, commercial use, or claiming this project as your own is not permitted without written permission from the original creator and the relevant project contributors.
 
 ---
 
@@ -539,6 +548,6 @@ Unauthorized copying, redistribution, modification, commercial use, or claiming 
 
 **Because every second after a crash matters.**
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=20&duration=2500&pause=600&color=22C55E&center=true&vCenter=true&width=760&lines=Detect.;Countdown.;Alert.;Locate.;Record." alt="RoadSOS Animation" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=20&duration=2500&pause=600&color=22C55E&center=true&vCenter=true&width=760&lines=Detect.;Countdown.;Alert.;Locate.;Assist.;Record." alt="RoadSOS closing banner" />
 
 </div>
